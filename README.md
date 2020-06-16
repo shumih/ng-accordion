@@ -1,4 +1,4 @@
-# NgAccordion
+v# NgAccordion
 
 The library is an angular component for an accordion UI element
 
@@ -21,4 +21,4 @@ import NgAccordionModule where you're going to use it
 export class AppModule {}
 ```
 
-API can be found in the short [demo](http://stackblitz.com/github/shumih/ng-accordion)
+API can be found in the short [demo](https://stackblitz.com/edit/github-kdybrh)
