@@ -1,0 +1,50 @@
+.ng-accordion-group-arrow-icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  margin: 0 4px;
+
+  &.collapsed > span {
+    background-color: #a5b0d5;
+
+    &:first-of-type {
+      transform: rotate(-45deg);
+    }
+
+    &:last-of-type {
+      transform: rotate(45deg);
+    }
+  }
+
+  > span {
+    position: absolute;
+    display: inline-block;
+    top: 8px;
+    width: 12px;
+    height: 2px;
+    background-color: #00aaff;
+    transition: all 0.2s ease;
+
+    &:first-of-type {
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &:last-of-type {
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.ng-accordion-header {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.ng-accordion-content-wrapper {
+  margin: 1.25%;
+}

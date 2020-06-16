@@ -1,0 +1,26 @@
+<div
+  class="ng-accordion-header"
+  [class.collapsed]="!expanded"
+  [class.expanded]="expanded"
+  (click)="handleExpandedChange(!expanded)"
+>
+  <ng-container
+    *ngTemplateOutlet="headerTemplate || defaultHeader; context: { header: header, collapsed: !expanded }"
+  ></ng-container>
+</div>
+<div
+  @expandedCollapsed
+  *ngIf="expanded"
+  class="ng-accordion-content-wrapper"
+  [class.collapsed]="!expanded"
+  [class.expanded]="expanded"
+>
+  <ng-container *ngIf="!contentTemplateRef; else contentTemplateRef">
+    <ng-content></ng-content>
+  </ng-container>
+</div>
+
+<ng-template #defaultHeader let-header="header" let-collapsed="collapsed">
+  <div class="ng-accordion-group-arrow-icon" [class.collapsed]="collapsed"><span></span><span></span></div>
+  <span class="ng-accordion-group-header">{{ header }}</span>
+</ng-template>

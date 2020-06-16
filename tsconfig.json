@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-accordion": [
+        "dist/ng-accordion"
+      ],
+      "ng-accordion/*": [
+        "dist/ng-accordion/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
